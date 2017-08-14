@@ -5,3 +5,6 @@ node_modules/
 
 #ignore build artifacts
 build/
+
+#ignore vs code debugger configuration
+.vscode/launch.json

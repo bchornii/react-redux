@@ -1,32 +1,46 @@
-/*
-	action types
-*/
-export const ActionTypes = {
-	ADD_TODO: 'ADD_TODO',
-	TOGGLE_TODO: 'TOGGLE_TODO',
-	SET_VISIBILITY_FILTER: 'SET_VISIBILITY_FILTER'
-};
+// let nextTodoId = 0;
 
-/*
-	filter types
-*/
-export const VisibilityFilters = {
-	SHOW_ALL: 'SHOW_ALL',
-  	SHOW_COMPLETED: 'SHOW_COMPLETED',
-  	SHOW_ACTIVE: 'SHOW_ACTIVE'
-};
+// export const addTodo = text => {
+// 	return {
+// 		type: 'ADD_TODO',
+// 		id: nextTodoId++,
+// 		text
+// 	}
+// }
 
-/*
-	action creators 
-*/
-export function addTodo(text) {
-	return {type: ActionTypes.ADD_TODO, text};
+// export const toggleTodo = id => {
+// 	return {
+// 		type: 'TOGGLE_TODO',
+// 		id
+// 	}
+// }
+
+// export const setVisibilityFilter = filter => {
+// 	return {
+// 		type: 'SET_VISIBILITY_FILTER',
+// 		filter
+// 	}
+// }
+
+let nextTodoId = 0
+export const addTodo = text => {
+  return {
+    type: 'ADD_TODO',
+    id: nextTodoId++,
+    text
+  }
 }
 
-export function toggleTodo(index) {
-	return {type: ActionTypes.TOGGLE_TODO, index};
+export const setVisibilityFilter = filter => {
+  return {
+    type: 'SET_VISIBILITY_FILTER',
+    filter
+  }
 }
 
-export function setVisibilityFilter(filter) {
-	return {type: ActionTypes.SET_VISIBILITY_FILTER, filter};
+export const toggleTodo = id => {
+  return {
+    type: 'TOGGLE_TODO',
+    id
+  }
 }
